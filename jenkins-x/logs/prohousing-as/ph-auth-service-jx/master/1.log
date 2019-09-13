@@ -1,0 +1,126 @@
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-hjn4k[0m
+{"level":"warn","ts":1568365550.132002,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568365550.1342564,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-lgnk7[0m
+{"level":"warn","ts":1568365550.707915,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365550.709066,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-prohousing-as-ph-auth-serv-xtn8r[0m
+{"level":"warn","ts":1568365556.766482,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568365557.870228,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/prohousing-as/ph-auth-service-**.git @ 9e3cfcf623769c04810af3b4e175cc34509ba7b5 in path /workspace/source"}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9e3cfcf623769c04810af3b4e175cc34509ba7b5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+performing pack detection in folder /workspace/source
+--> Draft detected YAML (67.943621%)
+--> Could not find a pack for YAML. Trying to find the next likely language match...
+--> Draft detected RPM Spec (14.911456%)
+--> Could not find a pack for RPM Spec. Trying to find the next likely language match...
+--> Draft detected Coq (6.852186%)
+--> Could not find a pack for Coq. Trying to find the next likely language match...
+--> Draft detected Smarty (3.729671%)
+--> Could not find a pack for Smarty. Trying to find the next likely language match...
+--> Draft detected Go (2.927358%)
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/go
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/ph-auth-service-**/Chart.yaml to 0.0.1
+Updating repository in charts/ph-auth-service-**/values.yaml to 591373184090.dkr.ecr.eu-west-1.amazonaws.com/prohousing-as/ph-auth-service-**
+Updating tag in charts/ph-auth-service-**/values.yaml to 0.0.1
+Tag v0.0.1 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for prohousing-as-ph-auth-service-**-master-1
+Applying changes 
+upserted PipelineResource prohousing-as-ph-auth-service-j for the git repository https://github.com/prohousing-as/ph-auth-service-**.git
+upserted Task prohousing-as-ph-auth-service-j-run-make-1
+upserted Task prohousing-as-ph-auth-service-j-everything-else-1
+upserted Pipeline prohousing-as-ph-auth-service-j-1
+created PipelineRun prohousing-as-ph-auth-service-j-1
+created PipelineStructure prohousing-as-ph-auth-service-j-1
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-credential-initializer-qwkv6[0m
+{"level":"warn","ts":1568365581.006356,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568365581.0071805,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-working-dir-initializer-sq58s[0m
+{"level":"warn","ts":1568365581.991791,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365581.9928823,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-git-source-prohousing-as-ph-auth-service-j-b6twq[0m
+{"level":"warn","ts":1568365629.0829742,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568365630.1961808,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/prohousing-as/ph-auth-service-**.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9e3cfcf623769c04810af3b4e175cc34509ba7b5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/ph-auth-service-** main.go
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-source-mkdir-prohousing-as-ph-auth-service-j-cmgtr[0m
+{"level":"warn","ts":1568365637.8332827,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365637.8356206,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /pvc/run-make/workspace\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32mrun-make[0m and container [32mstep-source-copy-prohousing-as-ph-auth-service-j-rz8gq[0m
+{"level":"warn","ts":1568365638.0131705,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365638.0297225,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /workspace/source/. /pvc/run-make/workspace\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32meverything-else[0m and container [32mstep-credential-initializer-mr55h[0m
+{"level":"warn","ts":1568365645.687945,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568365645.68826,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32meverything-else[0m and container [32mstep-working-dir-initializer-gfngt[0m
+{"level":"warn","ts":1568365646.698979,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365646.7029693,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/ph-auth-service-**\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32meverything-else[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32meverything-else[0m and container [32mstep-create-dir-workspace-pn5kz[0m
+{"level":"warn","ts":1568365651.7450683,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365651.746091,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32meverything-else[0m and container [32mstep-source-copy-workspace-h4c5g[0m
+{"level":"warn","ts":1568365651.961385,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568365652.0178807,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"cp -r /pvc/run-make/workspace/. /workspace/source\""}
+
+Showing logs for build [32mprohousing-as-ph-auth-service-j-1[0m stage [32meverything-else[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/ph-auth-service-**"]           
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+error pushing image: failed to push to destination gcr.io/prohousing-as/ph-auth-service-**:0.0.1: Get https://gcr.io/v2/token?scope=repository%3Aprohousing-as%2Fph-auth-service-**%3Apush%2Cpull&service=gcr.io: invoking docker-credential-gcr: exit status 1; output: docker-credential-gcr/helper: could not retrieve GCR's access token: google: error getting credentials using GOOGLE_APPLICATION_CREDENTIALS environment variable: open /kaniko-secret/secret.json: no such file or directory
+[31m
+Pipeline failed on stage 'everything-else' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
